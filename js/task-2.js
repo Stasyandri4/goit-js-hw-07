@@ -25,21 +25,18 @@ const images = [
   },
 ]
 
+const gallery = document.querySelector('.gallery')
+
 const img = arr => {
   return arr.map(img => {
-    const gallery = document.querySelector('.gallery')
-
     const liEl = document.createElement('li')
     liEl.classList.add('list-of-images')
-
     const imgEl = document.createElement('img')
     imgEl.src = img.url
     imgEl.alt = img.alt
 
     liEl.append(imgEl)
     gallery.append(liEl)
-
-    return gallery
   })
 }
 
